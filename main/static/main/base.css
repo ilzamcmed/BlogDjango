@@ -1,0 +1,29 @@
+.navbar-dark .navbar-brand {
+    color: #FFDE59;
+    font-family: 'Poppins', sans-serif;
+  }
+  .navbar-dark .navbar-brand:hover,
+  .navbar-dark .navbar-brand:focus {
+    color: #FFDE59;
+  }
+  
+  
+  .navbar{
+    position: relative;
+    overflow: hidden;
+    background-image: url('../../static/main/starry-sky.jpg');
+    /*height: 180px;*/
+  }
+  
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: #FFDE59;
+    font-family: 'Poppins', sans-serif;
+  }
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #FFDE59;
+    text-shadow: grey 0px 0px 2px;
+    text-decoration: overline ;
+    text-decoration-style:solid;
+  }
+  

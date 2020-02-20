@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    {% load bootstrap4 %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main/base.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTI WARS</title>
+    {% block head-css %}
+    <link href="{% static 'bootstrap/css/bootstrap-theme.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/custom.css' %}" rel="stylesheet" media="screen">
+    {% endblock %}
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark indigo">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li><a class="nav-item nav-link" href="{% url 'terapiaintensiva' %}">Terapia Intensiva</a></li>
+            <li><a class="nav-item nav-link" href="{% url 'novidades' %}">Novidades</a></li>
+            <li><a class="nav-item nav-link" href="{% url 'cursos' %}">Cursos</a></li>
+            <li><a class="nav-item nav-link" href="{% url 'conselhojedi' %}">Conselho Jedi</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href='../../static/main/logo.jpeg'>
+        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+    </a>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="{% url 'home' %}">Home</a>
+            <a class="nav-item nav-link" href="{% url 'terapiaintensiva' %}">Terapia Intensiva</a>
+            <a class="nav-item nav-link" href="{% url 'novidades' %}">Novidades</a>
+            <a class="nav-item nav-link" href="{% url 'cursos' %}">Cursos</a>
+            <a class="nav-item nav-link" href="{% url 'conselhojedi' %}">Conselho Jedi</a>
+        </div>
+    </div>
+</nav>
+
+
+<body>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    <div class="page-footer">
+        <h1><a href="/">Footer</a></h1>
+    </div>
+</body>
+
+</html>
