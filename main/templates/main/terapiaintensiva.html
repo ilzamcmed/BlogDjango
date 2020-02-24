@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    {% extends 'main/base.html' %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
@@ -10,7 +11,7 @@
 </head>
 
 <body>
-
+    {% block content %}
     <div class="container-title">
         <div class="title">
             <h1>Terapia Intensiva</h1>
@@ -26,7 +27,7 @@
 
         </div>
 
-    
+        {% endblock %}
 </body>
 
 </html>

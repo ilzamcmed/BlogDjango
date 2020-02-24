@@ -38,3 +38,4 @@ def cursos(request):
     template = loader.get_template('main/cursos.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
