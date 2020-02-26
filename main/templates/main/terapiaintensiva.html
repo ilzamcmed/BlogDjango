@@ -1,33 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'main/base.html' %}
+{% load static %}
+{% block head-css %}
+<link rel="stylesheet" href="{% static 'main/terapiaintensiva.css' %}">
+{% endblock %}
 
-<head>
-    {% extends 'main/base.html' %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'main/terapiaintensiva.css' %}">
-    <title>Terapia Intensiva</title>
-</head>
+{% block content %}
+<div class="uti">
+    <h1>Terapia Intensiva</h1>
 
-<body>
-    {% block content %}
-    <div class="container-title">
-        <div class="title">
-            <h1>Terapia Intensiva</h1>
-        </div>
-    </div>
     <div class="row">
-        
-            <p class="texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, et? Adipisci provident
-                facere corrupti non blanditiis? Culpa ea, dolorem et non eum voluptates sapiente facere consequatur
-                soluta, fugiat asperiores corporis.</p>
 
-            <img class="img-terapia" src="{% static "main/soro.jpg" %}" alt="Imagem de soro">
+        <p class="texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, et? Adipisci provident
+            facere corrupti non blanditiis? Culpa ea, dolorem et non eum voluptates sapiente facere consequatur
+            soluta, fugiat asperiores corporis.</p>
 
-        </div>
+        <img class="img-terapia" src="{% static "main/soro.jpg" %}" alt="Imagem de soro">
 
-        {% endblock %}
-</body>
-
-</html>
+    </div>
+</div>
+{% endblock %}

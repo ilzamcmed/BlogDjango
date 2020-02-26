@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
+
+
+
 .img-logo{
   width: 150px;
   height: 110px;
-  align-items: ;
 }
+
 .bg-light {
   background-image: url("starry-sky.jpg") !important;
 }
+
+.navbar-dark {
+  color: #FFDE59 !important;
+}
+.page-footer{
+    background-image: url("starry-sky.jpg") !important;
+}
+

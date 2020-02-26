@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
-.title{
-    font-family: 'Oswald', sans-serif ;
-    font-size: 56px;
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
     text-align: center;
+    padding: 25px; 
+    color: #3E3B3B;
 }
 
-.container-body{
-    flex-direction: row;
+.uti{
+    background-color: #eeeeee;
 }
+
+
+
 .texto{
     text-align: justify;
     font-family: 'Poppins', sans-serif;
@@ -22,8 +28,8 @@
 
 .img-terapia{
    
-    width: 100px;
-    height: 100px; 
+    width: 500px;
+    height: 200px; 
    
 }
 

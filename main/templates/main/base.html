@@ -3,14 +3,16 @@
 
 <head>
     {% load static %}
-    {% load bootstrap4 %}
+    {% load fontawesome_5 %}
+    {% fontawesome_5_static %} 
     <link rel="stylesheet" type="text/css" href="{% static 'main/base.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UTI WARS</title>
-    {% block head-css %}
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% block head-css %}
     {% endblock %}
 
 </head>
@@ -20,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,35 +39,64 @@
                 <li class="nav-item"><a class="nav-link" href="{% url 'conselhojedi' %}">Conselho Jedi</a></li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquise" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Go!</button>
             </form>
         </div>
     </nav>
 
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
+   
                 {% block content %}
                 {% endblock %}
-            </div>
-        </div>
-    </div>
-    <footer class="footer">
+         
+    
+    <!-- Footer -->
+<footer class="page-footer">
 
-        <div>
-            <p>Contatos:</p>
-            <p>Telefone: 2222-2222 / 3333-3333</p>
-            <p>e-mail: utiwars.gmail.com</p>
-        </div>
-        <div>
-            <li><a>Facebook</a></li>
-            <li><a>Instagram</a></li>
-            <li><a>Youtube</a></li>
-        </div>
-
+    <div>
+      <div class="container">
+  
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+  
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+  
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Contato</h6>
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                  <i class="fas fa-envelope mr-3"></i> utiwars@gmail.com</p>
+                <p>
+                  <i class="fas fa-phone mr-3"></i> + 55 81 2222-2222</p>
+                <p>
+                  <i class="fas fa-print mr-3"></i> + 55 81 3333-3333</p>
         
-    </footer>
+              </div>
+              <!-- Grid column -->
+        
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+  
+            <!-- Facebook -->
+            <a>{% fa5_icon 'facebook' 'fab' %}
+            </a>
+            <!--Youtube-->
+            <a>{% fa5_icon 'youtube' 'fab' %}
+            </a>
+            <!--Instagram-->
+            <a> {% fa5_icon 'instagram' 'fab' %}</a>
+  
+          </div>
+          <!-- Grid column -->
+  
+        </div>
+        <!-- Grid row-->
+  
+      </div>
+    </div>
+  
+  </footer>
 
 </body>
 

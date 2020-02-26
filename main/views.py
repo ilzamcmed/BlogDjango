@@ -7,12 +7,14 @@ from .models import Postagem
 def home(request):
     
     template = loader.get_template('main/home.html')
+    postagem_list = Postagem.objects.order_by('-data')[:3]
     if request.user.is_authenticated:
         username = request.user.username
     else:
         username = None
     context = {
         "username": username,
+         "postagem_list": postagem_list,
     } 
     return HttpResponse(template.render(context, request))
 

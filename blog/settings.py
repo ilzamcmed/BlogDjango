@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'bootstrap4',
+    'fontawesome_5',
 ]
 
 MIDDLEWARE = [
