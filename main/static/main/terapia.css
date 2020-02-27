@@ -27,9 +27,9 @@
 }
 
 .terapia-img{
-   padding: 50px 0px 50px 100px;
-    width: 400px;
-    height: 400px; 
+   padding: 50px 0px 50px 50px;
+    width: 600px;
+    height: 500px; 
    
 }
 
@@ -44,7 +44,7 @@
     }
 
     .terapia-img{
-        margin-left: -45px !important;
+        margin-left: -20px !important;
          width: 400px;
          height: 400px; 
         
