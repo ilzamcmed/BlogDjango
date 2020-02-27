@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:600&display=swap');
+* {box-sizing: border-box}
+
+ h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    padding: 25px; 
+    color: #3E3B3B;
+}
+
+.uti{
+    background-color: #eeeeee;
+}
+
+
+.texto{
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    width: 500px;
+    margin-left: 70px;
+    display:block;
+    margin-right: none;
+    margin-top: 50px;
+}
+
+.terapia-img{
+   padding: 50px 0px 50px 100px;
+    width: 400px;
+    height: 400px; 
+   
+}
+
+
+@media only screen and (max-device-width: 900px) {
+    .texto{
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        margin-left: 37px !important;
+        width: 330px !important;
+    }
+
+    .terapia-img{
+        margin-left: -45px !important;
+         width: 400px;
+         height: 400px; 
+        
+     }
+}

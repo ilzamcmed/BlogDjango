@@ -83,3 +83,61 @@ background-size: cover;
 	margin: auto;
 	display: block;
 }
+
+/*PODCAST*/
+
+.acoes{
+    justify-content: center;
+    display: inline-block;
+    padding: 0 55px;
+  }
+  
+  .title{
+    padding: 50px 10px;
+    
+   }
+  
+  .podcast{
+    width: 470px;
+    height: 300px;
+    padding: 10px 30px;
+  }
+  
+   .sub-title{
+    margin-left: 50px;
+     text-align: center;
+   }
+  
+  
+   
+  .cadastro{
+      margin-left: 70px;
+  }
+.btn{
+    margin-left: 70px;
+}
+
+@media only screen and (max-device-width: 900px) {
+    .videoL { 
+      width:100%; 
+      margin-left: 0px
+    } 
+  
+    .mb-1{
+      width: 300px;
+     margin-left: 50px;
+     padding-bottom: 20px;
+    }
+   
+    .acoes{
+      justify-content: center;
+      display: inline-block;
+      padding: 0 0 0 0;
+    }
+    .podcast{
+      width: 100%;
+      height: 300px;
+      padding: 10px 60px;
+    }
+    }
+  

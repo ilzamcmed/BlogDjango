@@ -4,3 +4,4 @@ from .models import Postagem
 # Register your models here.
 
 admin.site.register(Postagem)
+

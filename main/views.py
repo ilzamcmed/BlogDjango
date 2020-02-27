@@ -41,3 +41,6 @@ def cursos(request):
     context = {}
     return HttpResponse(template.render(context, request))
 
+def cadastrar_usuario(request):
+    form = UsuarioForm()
+    return render(request, "home.html", {'form':form})
