@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:600&display=swap');
+* {box-sizing: border-box}
+
+ h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    padding: 25px; 
+    color: #3E3B3B;
+}
+
+
 .row {
     margin-left: 0;
     margin-right: 0;
@@ -27,7 +40,7 @@
 
 .navbar .nav-item .nav-link:hover {
 	background-color: #FFF;
-	color:#29AB87;
+	color:#FFDE59;
 }
 
 .card {
@@ -40,17 +53,17 @@
 }
 
 .card .btn-primary {
-	background-color: #29AB87;
-	border-color: #29AB87;
+	background-color: #FFDE59;
+	border-color: #FFDE59;
 }
 
 .card .btn-primary:hover {
 	background-color: #FFF;
-	color: #29AB87;
+	color: #FFDE59;
 }
 
 .row .jumbotron {
-	background-color: #00A572;
+	background-color: #FFDE59;
 	color: #FFF;
 	margin-top: 50px;
 }

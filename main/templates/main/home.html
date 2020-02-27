@@ -57,22 +57,26 @@
 
 
 <div class="novidade">
-  <h1>NOVIDADES</h1>
-  <div class="row">
+  <h1 class="">NOVIDADES</h1>
+  <div class="col-md-4">
     {% for elemento in postagem_list %}
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://via.placeholder.com/286x180" alt="Card image cap">
-      <div class="card-body">
-
-        <h5 class="card-title">{{ elemento.titulo }}</h5>
-        <p class="card-text">{{ elemento.descricao|truncatechars:30 }}</p>
-        <p>Criado em {{ elemento.data }} por {{ elemento.autor }}</p>
-        <a href="#" class="btn btn-primary">Ver o post completo</a>
-
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="{% static "main/foto-storm.jpg" %}"  class="card-img" alt="...">
       </div>
-
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ elemento.titulo }}</h5>
+          <p class="card-text">{{ elemento.descricao|truncatechars:50 }}</p>
+          <p class="card-text"><small class="text-muted">Criado em {{ elemento.data }} por {{ elemento.autor }}</small></p>
+        </div>
+      </div>
+      
     </div>
-    {% endfor %}
+    
+  </div>
+  {% endfor %}
   </div>
 </div>
 

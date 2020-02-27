@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:600&display=swap');
+* {box-sizing: border-box}
+
+ h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    padding: 25px; 
+    color: #3E3B3B;
+}
+
+.row {
+    margin-left: 50px;
+  
+}
