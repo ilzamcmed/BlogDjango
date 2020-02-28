@@ -57,60 +57,55 @@
 
 
 <div class="novidade">
-  <h1 class="">NOVIDADES</h1>
-  <div class="col-md-4">
+  <h1>NOVIDADES</h1>
+  <div class="row">
     {% for elemento in postagem_list %}
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="{% static "main/foto-storm.jpg" %}"  class="card-img" alt="...">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://via.placeholder.com/286x180" alt="Card image cap">
+      <div class="card-body">
+
+        <h5 class="card-title">{{ elemento.titulo }}</h5>
+        <p class="card-text">{{ elemento.descricao|truncatechars:20 }}</p>
+        <p>Criado em {{ elemento.data }} por {{ elemento.autor }}</p>
+        <a href="{% url 'post_detail' elemento.slug  %}" class="btn btn-primary">Ver o post completo</a>
+
+
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{ elemento.titulo }}</h5>
-          <p class="card-text">{{ elemento.descricao|truncatechars:50 }}</p>
-          <p class="card-text"><small class="text-muted">Criado em {{ elemento.data }} por {{ elemento.autor }}</small></p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="container-podcast">
+    <div class="row">
+      <div class="acoes">
+        <div class="title">
+          <h1>PODCAST</h1>
+          <a href="http://intensivecasts.buzzsprout.com/">
+            <img class="podcast" src="{% static "main/podcast.jpeg" %}" alt="link para podcast" />
+          </a>
         </div>
       </div>
-      
-    </div>
-    
-  </div>
-  {% endfor %}
-  </div>
-</div>
+      <div class="acoes">
+        <div class="title">
+          <h1>INSCREVA-SE</h1>
+          <p class="sub-title">Que ficar por dentro das nossas novidades?</p>
+          <p class="sub-title">Se inscreva na nossa newsletter!</p>
 
-<div class="container-podcast">
-  <div class="row">
-    <div class="acoes">
-      <div class="title">
-        <h1>PODCAST</h1>
-        <a href="http://intensivecasts.buzzsprout.com/">
-          <img class="podcast" src="{% static "main/podcast.jpeg" %}" alt="link para podcast" />
-        </a>
-      </div>
-    </div>
-    <div class="acoes">
-      <div class="title">
-        <h1>INSCREVA-SE</h1>
-        <p class="sub-title">Que ficar por dentro das nossas novidades?</p>
-        <p class="sub-title">Se inscreva na nossa newsletter!</p>
-        
-        <p class="cadastro">
-          <label for="id_nome">Nome:</label>
-          <input type="text" name="nome" maxlength="20" required id="id_nome">
-        </p>
-        <p class="cadastro">
-          <label for="id_email">E-mail:</label>
-          <input type="text" name="email" maxlength="254" required id="id_email">
-        </p>
-        {{ form.as_p }}
-        <button type="button" class="btn btn-secondary btn-sm"> {{ form.as_p }} Cadastrar</button>
+          <p class="cadastro">
+            <label for="id_nome">Nome:</label>
+            <input type="text" name="nome" maxlength="20" required id="id_nome">
+          </p>
+          <p class="cadastro">
+            <label for="id_email">E-mail:</label>
+            <input type="text" name="email" maxlength="254" required id="id_email">
+          </p>
+          {{ form.as_p }}
+          <button type="button" class="btn btn-secondary btn-sm"> {{ form.as_p }} Cadastrar</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
-{% endblock %}
+  {% endblock %}

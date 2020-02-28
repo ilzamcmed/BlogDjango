@@ -7,22 +7,32 @@
 
   {% block content %}
   <h1>Novidades</h1>
-  {% for elemento in postagem_list %}
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="{% static "main/foto-storm.jpg" %}"  class="card-img" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{ elemento.titulo }}</h5>
-          <p class="card-text">{{ elemento.descricao|truncatechars:50 }}</p>
-          <p class="card-text"><small class="text-muted">Criado em {{ elemento.data }} por {{ elemento.autor }}</small></p>
+  <div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8 mt-3 left">
+            {% for post in postagem_list %}
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.titulo }}</h2>
+                    <p class="card-text text-muted h6">{{ post.autor }} | {{ post.data}} </p>
+                    <p class="card-text">{{post.descricao|slice:":200" }}</p>
+                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Leia mais &rarr;</a>
+                </div>
+            </div>
+            {% endfor %}
         </div>
-      </div>
       
     </div>
-    
-  </div>
-  {% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
     {% endblock %}

@@ -24,5 +24,6 @@ urlpatterns = [
     path('terapiaintensiva/', views.terapiaintensiva, name='terapiaintensiva'),
     path('novidades/', views.novidades, name='novidades'),
     path('cursos/', views.cursos, name='cursos'),
+    path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
 
 ]

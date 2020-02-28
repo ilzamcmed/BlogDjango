@@ -9,16 +9,13 @@
 }
 
 .bg-light {
-  background-image: url("starry-sky.jpg") !important;
+  background-image: url("starry-sky.jpg") ;
 }
 
 .navbar-dark {
   color: #FFDE59 !important;
 }
 .page-footer{
-    background-image: url("starry-sky.jpg") !important;
+    background-image: url("starry-sky.jpg") ;
 }
 
-.fas fa {
-  color: #BBC9DA;
-}

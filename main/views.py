@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from .models import Postagem
+from django.views import generic
 # Create your views here.
 
 def home(request):
@@ -35,6 +36,10 @@ def novidades(request):
         "postagem_list": postagem_list,
     }
     return HttpResponse(template.render(context, request))
+
+class PostDetail(generic.DetailView):
+    model = Postagem
+    template_name = 'main/post_detail.html'
 
 def cursos(request):
     template = loader.get_template('main/cursos.html')
