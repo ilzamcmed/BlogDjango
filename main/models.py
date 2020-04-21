@@ -8,6 +8,7 @@ class Postagem(models.Model):
     descricao = models.TextField()
     data = models.DateTimeField(auto_now=True)
     autor = models.CharField(max_length=100)
+    arquivo = models.ImageField(upload_to="media/pictures", blank=True)
     
 
 class Meta:

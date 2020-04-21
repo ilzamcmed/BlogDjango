@@ -5,8 +5,10 @@ from .models import Postagem, Comment
 class PostAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'data')
     list_filter = ("autor",)
+    image_field = ('arquivo')
     search_fields = ['titulo', 'descricao']
     prepopulated_fields = {'slug': ('titulo',)}
+    
 
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'postagem', 'created_on', 'active')
