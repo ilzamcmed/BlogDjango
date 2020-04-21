@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 
+.navbar-dark .navbar-nav .nav-link {
+  color: #FFDE59 !important;
 
+}
 
 .img-logo{
   width: 150px;
@@ -9,13 +12,23 @@
 }
 
 .bg-light {
-  background-image: url("starry-sky.jpg") ;
+  background-image: url('starry-sky.jpg') ;
 }
 
 .navbar-dark {
   color: #FFDE59 !important;
 }
-.page-footer{
-    background-image: url("starry-sky.jpg") ;
-}
 
+.btn-outline-success, .btn{
+  background: #3E3B3B;
+  color: #FFDE59
+}
+.page-footer{
+    /* background-image: url('starry-sky.jpg') ; */
+    background-color: #000000cc;
+  }
+  
+  .unique-color-dark{
+    color: #FFDE59 !important;
+
+}

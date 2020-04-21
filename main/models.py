@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Postagem(models.Model):
     titulo = models.CharField(max_length=200, unique=True)
@@ -14,9 +15,17 @@ class Meta:
         def __str__(self):
             return '%s %s' % (self.titulo, self.data)
 
-class Usuario(models.Model):
-    nome = models.CharField(max_length=20, null=False)
-    email = models.EmailField(null=False),
-    
+
+class Comment(models.Model):
+    postagem = models.ForeignKey(Postagem,on_delete=models.CASCADE,related_name='comments')
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['created_on']
+
     def __str__(self):
-        return '%s %s' % (self.nome, self.email)
+        return '%s %s' % (self.body, self.name)

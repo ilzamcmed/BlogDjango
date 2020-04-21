@@ -1,103 +1,77 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:600&display=swap');
 * {box-sizing: border-box}
-
+* {font-family: Verdana, Geneva, Tahoma, sans-serif;}
 h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 48px;
     text-align: center;
     padding: 25px; 
-    color: #3E3B3B;
+    color: #eeeeee;
+}
+
+main {
+  margin: 50px;
+}
+
+body {
+  background: url(starry-sky.jpg);
 }
 
 
 /*CAROUSEL*/
-
-
-.carousel,
-.item {
-height: 100%;
-height: 500px;
-}
-.item img{
-width: 100%;
-height: 600px;
-}
-a.left{
-box-shadow: 0px;
-}
-a.left:hover{
-box-shadow: 0px;
-}
-.carousel-inner {
-height: 100%;
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-/* Background images are set within the HTML using inline CSS, not here */
+/*NOVIDADES */
 
-.fill {
-width: 100%;
-height: 400px;
-background-position: center;
--webkit-background-size: cover;
--moz-background-size: cover;
-background-size: cover;
--o-background-size: cover;
+.card {
+  text-align: center;
+}
+
+.card-header {
+  background-color: #3E3B3B;
+  color: #fff;
+}
+
+.btn-primary {
+  color: #eeeeee;
+  background-color: #3e3b3b;
+  border-color: #3E3B3B;
+}
+
+.btn-primary:hover {
+  color: #FFDE59;
+  background-color: #3e3b3b;
+  border-color: #3E3B3B;
 }
 
 
 /*VIDEO*/
-.videoL{
+.videos{
     align-items: center;
-    margin-left: 360px;
+   text-align: center;
    }
+ iframe {
+   margin: 15px 0;
+   border: 1px solid #3e3b3b
+ }
 
-
-   /*NOVIDADES*/
-
-
-.row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.card {
-	margin: auto;
-	border-radius: 0;
-}
-
-.card-img-top {
-	border-radius: 0;
-}
-
-.card .btn-primary {
-	background-color: #3E3B3B;
-	border-color: #3E3B3B;
-}
-
-.card .btn-primary:hover {
-	background-color: #FFF;
-	color: #29AB87;
-}
-
-
-
-.card .btn.btn-primary {
-	margin: auto;
-	display: block;
-}
 
 /*PODCAST*/
 
 .acoes{
+    text-align: center;
     justify-content: center;
     display: inline-block;
     padding: 0 55px;
   }
-  
-  .title{
-    padding: 50px 10px;
-    
-   }
   
   .podcast{
     width: 470px;
@@ -106,8 +80,9 @@ background-size: cover;
   }
   
    .sub-title{
-    margin-left: 50px;
-     text-align: center;
+    text-align: center;
+    color: #eeeeee;
+    font-weight: 600;
    }
   
   
@@ -115,10 +90,17 @@ background-size: cover;
   .cadastro{
       margin-left: 70px;
   }
-.btn{
+/* .btn{
     margin-left: 70px;
+}  */
+
+.container_video_podcast {
+  display: flex;
 }
 
+.container-podcast {
+  text-align: center;
+}
 
 @media only screen and (max-device-width: 900px) {
     .videoL { 

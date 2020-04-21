@@ -6,8 +6,8 @@
   {% endblock %}
 
   {% block content %}
-  <h1>Novidades</h1>
-  <div class="container">
+  <div class="container-news">
+    <h1>NOVIDADES</h1>
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8 mt-3 left">
@@ -17,7 +17,7 @@
                     <h2 class="card-title">{{ post.titulo }}</h2>
                     <p class="card-text text-muted h6">{{ post.autor }} | {{ post.data}} </p>
                     <p class="card-text">{{post.descricao|slice:":200" }}</p>
-                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Leia mais &rarr;</a>
+                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-secondary">Leia mais &rarr;</a>
                 </div>
             </div>
             {% endfor %}

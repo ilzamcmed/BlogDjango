@@ -8,9 +8,10 @@
     text-align: center;
     padding: 25px; 
     color: #3E3B3B;
+    
 }
 
-.row {
-    margin-left: 50px;
-  
+.container-news {
+    background-color: #EEEEEE;
 }
+

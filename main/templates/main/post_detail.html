@@ -10,8 +10,53 @@
         <p class="card-text ">{{ postagem.descricao | safe }}</p>
       </div>
     </div>
-    
+    <div class="col-md-8 card mb-4  mt-3 ">
+      <div class="card-body">
+        <!-- comments -->
+        <h5>{{ comments.count }} Comentários</h5>
+
+        {% for comment in comments %}
+        <div class="comments" style="padding: 10px;">
+          <p class="font-weight-bold">
+            {{ comment.name }}
+            <span class=" text-muted font-weight-normal">
+              {{ comment.created_on }}
+            </span>
+          </p>
+          {{ comment.body | linebreaks }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-md-8 card mb-4  mt-3 ">
+      <div class="card-body">
+
+        {% if new_comment %}
+        <div class="alert alert-success" role="alert">
+          Seu comentário está aguardando aprovação.
+        </div>
+        {% else %}
+        <h5>Deixe um comentário</h5>
+        <form method="post" style="margin-top: 1.3em;">
+          {{ comment_form.as_p }}
+          <p class="cadastro">
+            <label for="name">Nome: {{ comment.name }}</label>
+            <input type="text" name="nome" maxlength="20" required id="id_nome">
+          </p>
+          <p class="cadastro">
+            <label for="body">Comentário: {{ comment.body }}</label>
+            <input type="textfield" name="" maxlength="254" required id="id_text">
+          </p>
+          {% csrf_token %}
+          <button type="submit" class="btn btn-secondary  btn-sm">Submit</button>
+        </form>
+        {% endif %}
+      </div>
+    </div>
   </div>
 </div>
+  </div>
+</div>
+
 
 {% endblock content %}

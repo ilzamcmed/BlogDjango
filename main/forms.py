@@ -1,7 +1,9 @@
 from django import forms
 from .models import *
+from .models import Comment
 
-class UsuarioForm(forms.ModelForm):
+
+class CommentForm(forms.ModelForm):
     class Meta:
-        model = Usuario
-        fields = ["nome", "email"]
+        model = Comment
+        fields = ['name', 'body']
