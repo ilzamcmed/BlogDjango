@@ -9,7 +9,6 @@
 {% block content %}
 
 
-
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -54,20 +53,12 @@
 
   <h1>UTI WARS</h1>
 
-  <!-- Marketing Icons Section -->
-  <div class="row">
+  <div class="novidades">
     {% for elemento in postagem_list %}
-    <div class="col-lg-4 mb-4">
-      <div class="card h-100">
-        <h4 class="card-header">{{ elemento.titulo }}</h4>
-        <div class="card-body">
-          <p class="card-text">{{ elemento.descricao|truncatechars:100 }}</p>
-        </div>
-        <div class="card-footer">
-          <p>Criado em {{ elemento.data }} por {{ elemento.autor }}</p>
-          <a href="{% url 'post_detail' elemento.slug  %}" class="btn btn-primary">Ver post completo</a>
-        </div>
-      </div>
+    <div class="card">
+      <img class="card__img"src="{{ elemento.image_url|default_if_none:'#' }}">
+      <a class="card__title" href="{% url 'post_detail' elemento.slug  %}" class="card__title"><h5>{{ elemento.titulo }}</h5></a>
+      <p class="card__subtitle">Criado por {{ elemento.autor }}</p>
     </div>
     {% endfor %}
   </div>

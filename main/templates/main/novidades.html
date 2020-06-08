@@ -1,30 +1,54 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block head-css %}
+<link rel="stylesheet" href="{% static 'main/novidade.css' %}">
+{% endblock %}
 
-  {% extends 'main/base.html' %}
-  {% load static %}
-  {% block head-css %}
-  <link rel="stylesheet" href="{% static 'main/novidade.css' %}">
-  {% endblock %}
+{% block content %}
 
-  {% block content %}
-  <div class="container-news">
-    <h1>NOVIDADES</h1>
-    <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-md-8 mt-3 left">
-            {% for post in postagem_list %}
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">{{ post.titulo }}</h2>
-                    <p class="card-text text-muted h6">{{ post.autor }} | {{ post.data}} </p>
-                    <p class="card-text">{{post.descricao|slice:":200" }}</p>
-                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-secondary">Leia mais &rarr;</a>
+<h1>NOVIDADES</h1>
+
+
+{% for post in postagem_list %}
+
+
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                src="{{ post.image_url|default_if_none:'#' }}" preserveAspectRatio="xMidYMid slice" focusable="false"
+                role="img" aria-label="Placeholder: Thumbnail">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c"></rect>
+            <div class="card-body">
+                <p class="card-text">{{ post.titulo }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+
+                        <a href="{% url 'post_detail' post.slug  %}" class="btn btn-sm btn-outline-secondary">Leia mais
+                            &rarr;</a>
+                    </div>
+                    <small class="text-muted">{{ post.autor }} <br> {{ post.data}}</small>
                 </div>
             </div>
-            {% endfor %}
         </div>
-      
     </div>
-</div>
+
+
+<!-- <div class="card mb-4">
+    <img class="card__img" src="{{ post.image_url|default_if_none:'#' }}" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.titulo }}</h2>
+                  <p class="card-text">{{post.descricao|slice:":200" }}</p>
+                  <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Leia mais &rarr;</a>
+                </div>
+                <div class="card-footer text-muted">
+                    {{ post.autor }} | {{ post.data}}
+                  
+                </div>
+              </div> -->
+
+
+{% endfor %}
 
 
 
@@ -35,4 +59,7 @@
 
 
 
-    {% endblock %}
+
+
+
+{% endblock %}

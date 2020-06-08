@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Postagem, Comment
 
+
 # Register your models here.
 class PostAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'data')
@@ -8,7 +9,8 @@ class PostAdmin(admin.ModelAdmin):
     image_field = ('arquivo')
     search_fields = ['titulo', 'descricao']
     prepopulated_fields = {'slug': ('titulo',)}
-    
+   
+
 
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'postagem', 'created_on', 'active')

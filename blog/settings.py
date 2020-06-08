@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'main',
     'bootstrap4',
     'fontawesome_5',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -128,5 +129,11 @@ STATICFILES_DIRS = [
         os.path.join(BASE_DIR, 'static'),
 ]
 
-MEDIA_ROOT = '/media/'
+# MEDIA_ROOT = '/media/'
 MEDIA_URL = '/media/'
+
+CKEDITOR_CONFIGS = {
+    'awesome_ckeditor': {
+        'toolbar': 'Basic',
+    },
+}

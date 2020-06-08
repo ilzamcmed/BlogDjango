@@ -11,7 +11,16 @@
     
 }
 
-.container-news {
+/* .container-news {
     background-color: #EEEEEE;
+    text-align: center;
+   
 }
 
+.card {
+    display: flex;
+    max-width: 400px;
+}
+.card__img {
+    max-width: 300px;
+} */

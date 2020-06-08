@@ -9,7 +9,10 @@ class Postagem(models.Model):
     data = models.DateTimeField(auto_now=True)
     autor = models.CharField(max_length=100)
     arquivo = models.ImageField(upload_to="media/pictures", blank=True)
-    
+    @property
+    def image_url(self):
+        if self.arquivo and hasattr(self.arquivo, 'url'):
+            return self.arquivo.url    
 
 class Meta:
         ordering = ['-created_on']
