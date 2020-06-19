@@ -6,13 +6,35 @@
 
 {% block content %}
 
-<h1>NOVIDADES</h1>
+<img class="imagem" src="../../static/main/medico.jpg" alt="">
+<div class="card_text">
+    <p class="central_text">Encontre artigos comentados e as ultimas novidades sobre <br><span>TERAPIA INTENSIVA</span></p>
+</div>
+
 
 
 {% for post in postagem_list %}
+<section class="post container">
+    <img class="post_img" src={{ post.image_url|default_if_none:'#' }} alt="foto teste do storm">
+    <div class="post_detail">
+        <small >{{ post.autor }} | {{ post.data}}</small>
+        <h5 class="post_detail-title" ><a href="{% url 'post_detail' post.slug  %}">{{ post.titulo }} </a></h5>
+        <p class="post_detail-text">{{ post.descricao | slice:":200" }}</p>
+        <a class="button_post" href="{% url 'post_detail' post.slug  %}">Veja mais</a>
+    </div>
+    <hr>
+
+</section>
 
 
-    <div class="col-md-4">
+
+
+
+
+
+
+
+<!-- <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
                 src="{{ post.image_url|default_if_none:'#' }}" preserveAspectRatio="xMidYMid slice" focusable="false"
@@ -31,7 +53,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 <!-- <div class="card mb-4">
@@ -48,18 +70,6 @@
               </div> -->
 
 
+
 {% endfor %}
-
-
-
-
-
-
-
-
-
-
-
-
-
 {% endblock %}
