@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-
+a { color: inherit; } 
 
 .navbar-dark .navbar-nav .nav-link {
   color: #FFDE59 !important;
@@ -7,28 +7,62 @@
 }
 
 .img-logo{
-  width: 150px;
-  height: 110px;
+  width: 100px;
+  height: 80px;
 }
 
-.bg-light {
+.bg-star {
   background-image: url('starry-sky.jpg') ;
 }
 
-.navbar-dark {
+.navbar-dark, .text-yellow {
   color: #FFDE59 !important;
 }
 
-.btn-outline-success, .btn{
-  background: #3E3B3B;
-  color: #FFDE59
-}
-.page-footer{
-    /* background-image: url('starry-sky.jpg') ; */
-    background-color: #000000cc;
-  }
-  
-  .unique-color-dark{
-    color: #FFDE59 !important;
+.nav-item:hover{
+  transition: .5s;
+  font-size: 110%;
 
 }
+
+/* FOOTER */
+
+.page_footer{
+    background-image: url('starry-sky.jpg') ;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+  }
+ 
+  
+  .page_footer__contact a{
+    color: #FFDE59;
+    text-decoration: none;
+    
+  }
+  
+  .footer__icons {
+    padding: 10px;
+    font-size: 20px;
+    margin: 15px;
+    color: #FFDE59 !important;
+}
+  
+.rodape {
+  background-color: #141414;
+  text-align: end;
+  font-size: 10px;
+  padding: 5px;
+}
+.rodape a {
+  color: #cfcccc;
+}
+
+.rodape a:hover{
+  text-decoration: none;
+  color: #FFDE59;
+
+}
+

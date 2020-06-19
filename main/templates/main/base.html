@@ -2,27 +2,34 @@
 <html lang="en">
 
 <head>
-    {% load static %}
-    {% load fontawesome_5 %}
-    {% fontawesome_5_static %} 
-    <link rel="stylesheet" type="text/css" href="{% static 'main/base.css' %}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTI WARS</title>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    {% block head-css %}
-    {% endblock %}
+  {% load static %}
+  {% load fontawesome_5 %}
+  {% fontawesome_5_static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'main/base.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UTI WARS</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  {% block head-css %}
+  {% endblock %}
 
 </head>
 
 <body>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,65 +45,58 @@
                 <li class="nav-item"><a class="nav-link" href="{% url 'terapiaintensiva' %}">Terapia Intensiva</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'conselhojedi' %}">Conselho Jedi</a></li>
             </ul>
-            <!-- <form class="form-inline my-2 my-lg-0">
+             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder=" " aria-label="Search">
                 <button class="btn btn-outline my-2 my-sm-0" type="submit">Pesquise</button>
-            </form> -->
+            </form> 
         </div>
-    </nav>
+    </nav> -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-star ">
+    <div class="container">
 
-   
-                {% block content %}
-                {% endblock %}
-         
-    
-    <!-- Footer -->
-<footer class="page-footer unique-color-dark">
+      <a class="navbar-brand" href="#"><img class="img-logo" src="{% static "main/logo.jpeg" %}" /></a>
+      <a class="navbar-brand text-yellow" href="{% url 'home' %}">UTI WARS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div>
-      <div class="container">
-  
-        <!-- Grid row-->
-        <div class="row py-4 d-flex align-items-center">
-  
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-  
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Contatos:</h6>
-                
-                <p>
-                  <i class="fas fa-envelope white-text mr-3"></i> utiwars@gmail.com</p>
-                <p>
-                  <i class="fas fa-phone white-text mr-3"></i> + 55 81 2222-2222</p>
-                <p>
-                  <i class="fas fa-print white-text mr-3"></i> + 55 81 3333-3333</p>
-        
-              </div>
-              <!-- Grid column -->
-        
-  
-          <!-- Grid column -->
-          <div class="col-md-6 col-lg-7 text-center white-text text-md-right">
-  
-            <!-- Facebook -->
-            <a>{% fa5_icon 'facebook' 'fab' %}
-            </a>
-            <!--Youtube-->
-            <a>{% fa5_icon 'youtube' 'fab' %}
-            </a>
-            <!--Instagram-->
-            <a> {% fa5_icon 'instagram' 'fab' %}</a>
-  
-          </div>
-          <!-- Grid column -->
-  
-        </div>
-        <!-- Grid row-->
-  
+      <div class="collapse navbar-collapse justify-content-end" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav ">
+          <li class="nav-item mr-3">
+            <a class="nav-link text-white" href="{% url 'novidades' %}">Novidades</a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link text-white" href="{% url 'cursos' %}">Cursos</a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link text-white" href="{% url 'terapiaintensiva' %}">Terapia Intensiva</a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link text-white" href="{% url 'conselhojedi' %}">Conselho Jedi</a>
+          </li>
+        </ul>
       </div>
     </div>
-  
+  </nav>
+
+
+  {% block content %}
+  {% endblock %}
+
+  <footer class="page_footer">
+    <div class="page_footer__icons">
+      <a href="mailto:utiwars@gmail.com"><i class="fas fa-envelope footer__icons"></i></a>
+      <a class="footer__icons" href="https://www.facebook.com/intensivewars">{% fa5_icon 'facebook' 'fab' %}</a>
+      <a class="footer__icons" href="https://www.youtube.com/channel/UC0SgpR3KFIS9nJUQbwedqMg">{% fa5_icon 'youtube' 'fab' %}</a>
+      <a class="footer__icons" href="https://www.instagram.com/utiwars/"> {% fa5_icon 'instagram' 'fab' %}</a>
+    </div>
   </footer>
+
+  <div class="rodape">
+    <a href="https://ilzinha.github.io/">Deselvonvido por Ilza Medeiros</a>
+  </div>
+
 
 </body>
 
