@@ -19,6 +19,7 @@ from main import views
 from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,4 +30,8 @@ urlpatterns = [
     path('cursos/', views.cursos, name='cursos'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('', views.post_detail, name='post_detail'),
+    path('summernote/', include('django_summernote.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'main',
     'bootstrap4',
     'fontawesome_5',
-    'ckeditor',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
@@ -132,8 +132,6 @@ STATICFILES_DIRS = [
 # MEDIA_ROOT = '/media/'
 MEDIA_URL = '/media/'
 
-CKEDITOR_CONFIGS = {
-    'awesome_ckeditor': {
-        'toolbar': 'Basic',
-    },
-}
+DJANGO_WYSIWYG_FLAVOR = "ckeditor"
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'

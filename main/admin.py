@@ -1,5 +1,8 @@
 from django.contrib import admin
 from .models import Postagem, Comment
+from django_summernote.admin import SummernoteModelAdmin
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
+
 
 
 # Register your models here.
@@ -9,7 +12,15 @@ class PostAdmin(admin.ModelAdmin):
     image_field = ('arquivo')
     search_fields = ['titulo', 'descricao']
     prepopulated_fields = {'slug': ('titulo',)}
-   
+    
+class PostAdmin(SummernoteModelAdmin):
+    summernote_fields = ('content',)
+
+
+
+# Apply summernote to specific fields.
+class SomeForm(forms.Form):
+    foo = forms.CharField(widget=SummernoteWidget())  # instead of forms.Textarea
 
 
 class CommentAdmin(admin.ModelAdmin):
@@ -23,4 +34,5 @@ class CommentAdmin(admin.ModelAdmin):
 
 admin.site.register(Postagem, PostAdmin)
 admin.site.register(Comment, CommentAdmin)
+
 

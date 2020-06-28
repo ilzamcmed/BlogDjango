@@ -9,7 +9,7 @@
 .imagem {
     width: 100%;
     height: 450px;
-    
+
 }
 
 .card_text {
@@ -40,7 +40,7 @@
 
 .post_detail {
     margin-left: 45px;
-   
+
 }
 
 .post_detail-title {
@@ -54,19 +54,19 @@
 }
 
 .post_detail-text {
-width: 500px;
+    width: 500px;
 }
 
-.button_post a{
+.button_post a {
     color: #FFDE59;
     background-color: #3E3B3B;
     padding: 10px;
     font-size: 12px;
-   }
+}
 
 @media only screen and (max-device-width: 900px) {
     .card_text {
-        
+
         margin-top: -280px;
         margin-left: 50px;
     }
@@ -77,17 +77,17 @@ width: 500px;
     }
 
     .post {
-       
+        display: block;
         text-align: center;
-       
+
     }
 
-    .post_detail-title{
+    .post_detail-title {
         font-size: 20px;
-        
+
     }
 
     .post_detail {
-       text-align: center;
-        }
+        text-align: center;
+    }
 }

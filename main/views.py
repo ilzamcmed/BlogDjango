@@ -54,7 +54,7 @@ def cadastrar_usuario(request):
 def post_detail(request, slug):
     template_name = 'post_detail.html'
     post = get_object_or_404(Postagem, slug=slug)
-    comments = post.comments.filter(active=True)
+    comments = post.comments.filter(active=True).order_by("-created_on")
     new_comment = None
     # Comment posted
     if request.method == 'POST':
